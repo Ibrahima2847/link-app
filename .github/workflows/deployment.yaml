@@ -1,0 +1,47 @@
+name: Deployment to azure
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  NODE_VERSION: '20.x'
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Checkout GitHub Action'
+      uses: actions/checkout@v3
+
+    - name: 'Set up Node.js'
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    - name: 'Installation des Dépendences'
+      run: |
+        npm install
+
+    - name: 'Build App'
+      run: |
+        npm run build
+
+    - name: 'Deploiement sur azure WebAPP'
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'desa' 
+        slot-name: 'production'
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-

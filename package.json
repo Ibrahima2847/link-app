@@ -1,11 +1,11 @@
 {
-  "name": "nfi-mondial-net",
+  "name": "link-app",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "start": "node app",
     "test": "echo \"No tests yet...\"",
-    "build": "echo 'Rien à build'"
+    "build": "echo 'Pas de build'"
   },
   "dependencies": {
     "@azure/functions": "^4.6.0",
