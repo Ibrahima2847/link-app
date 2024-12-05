@@ -1,8 +1,8 @@
 const { BlobServiceClient } = require("@azure/storage-blob");
 const { v4: uuidv4 } = require("uuid");
 
-const connectionString = "DefaultEndpointsProtocol=https;AccountName=desamedias;AccountKey=TxVSVzRYnON6E5KZijWoPC6/pqHgbmZeSARMruBy4v1/la4JRV4PYVWm91HG4IZoVI+Yhbf5aEFe+ASt/1g2Sg==;EndpointSuffix=core.windows.net";
-const containerName = "uploads";
+const connectionString = "DefaultEndpointsProtocol=https;AccountName=linkapps;AccountKey=KK2HgNWv+Uuw6k8gk0PKpcnUjDUa8rvJJhQV4XqG0jM+8UfjI9zv3Ee9YFLIUnJhAymRITAY4jSQ+ASta+tCVg==;EndpointSuffix=core.windows.net";
+const containerName = "media";
 
 if (!connectionString || !containerName) {
   throw new Error("Les variables d'environnement pour Azure Blob Storage ne sont pas configurées !");
