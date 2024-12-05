@@ -16,7 +16,7 @@ const Utilisateur = sequelize.define("Utilisateur", {
   email: {
     type: DataTypes.STRING,
     allowNull: false,
-    unique: true, // Cette ligne indique à Sequelize d'ajouter une contrainte UNIQUE
+    unique: false, // Cette ligne indique à Sequelize d'ajouter une contrainte UNIQUE
     validate: {
       isEmail: true, // Validation pour vérifier que c'est un email
     },
