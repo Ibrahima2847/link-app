@@ -1,7 +1,7 @@
 const { Sequelize } = require("sequelize");
 
 // Configuration pour SQL Server
-const sequelize = new Sequelize("sqldb-desa", "Adminmaster", "Passer@1", {
+const sequelize = new Sequelize("sqldb-desa", "adminmaster", "Passer@1", {
   host: "sqldatabase-desa.database.windows.net", // Nom de ton serveur Azure
   dialect: "mssql", // Utilisation de SQL Server
   dialectOptions: {
