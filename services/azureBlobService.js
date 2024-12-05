@@ -1,7 +1,7 @@
 const { BlobServiceClient } = require("@azure/storage-blob");
 const { v4: uuidv4 } = require("uuid");
 
-const connectionString = "DefaultEndpointsProtocol=https;AccountName=linkapps;AccountKey=KK2HgNWv+Uuw6k8gk0PKpcnUjDUa8rvJJhQV4XqG0jM+8UfjI9zv3Ee9YFLIUnJhAymRITAY4jSQ+ASta+tCVg==;EndpointSuffix=core.windows.net";
+const connectionString = "DefaultEndpointsProtocol=https;AccountName=linkapps;AccountKey=ACGusPjzHmBks0dMrUwMq9iiX6g+CsPxVRY75qWHCg2cf+CFmHhkQeoXv9DHLz3vjJqvL73rv1ru+AStVJC8hQ==;EndpointSuffix=core.windows.net";
 const containerName = "media";
 
 if (!connectionString || !containerName) {
