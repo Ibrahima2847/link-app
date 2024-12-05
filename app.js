@@ -31,7 +31,7 @@ app.use("/notifications", notificationRoutes);
   try {
     await synchronizeDatabase(); // Synchronisation des tables
     app.listen(PORT, () => {
-      console.log(`Server running on https://desa-d6hthkeybab0graw.northeurope-01.azurewebsites.net`);
+      console.log(`Server running on`);
     });
   } catch (error) {
     console.error("Erreur au démarrage de l'application :", error);
