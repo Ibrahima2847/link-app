@@ -31,7 +31,7 @@ app.use("/notifications", notificationRoutes);
   try {
     await synchronizeDatabase(); // Synchronisation des tables
     app.listen(PORT, () => {
-      console.log(`Server running on https://nfi-mondial-net-guhdd8fhcxgxh7gz.northeurope-01.azurewebsites.net`);
+      console.log(`Server running on https://desa-d6hthkeybab0graw.northeurope-01.azurewebsites.net`);
     });
   } catch (error) {
     console.error("Erreur au démarrage de l'application :", error);
